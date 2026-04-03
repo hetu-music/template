@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>欢迎注册河图作品勘鉴</title>
+    <style>
+        /* Base styles for email client compatibility */
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            background-color: #fafafa;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+        }
+
+        .header {
+            padding: 50px 40px 30px;
+            text-align: center;
+        }
+
+        .brand-name {
+            font-family: 'Playfair Display', 'Noto Serif SC', serif;
+            font-size: 32px;
+            color: #1a1a1a;
+            margin: 0;
+            letter-spacing: 0.05em;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+        }
+
+        .content {
+            padding: 0 40px 40px;
+            color: #444;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .greeting {
+            font-size: 20px;
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 20px;
+        }
+
+        .cta-container {
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 50px;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+            transition: transform 0.2s ease;
+        }
+
+        .footer {
+            padding: 30px 40px 50px;
+            text-align: center;
+            background-color: #fcfcfc;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .footer-text {
+            font-size: 13px;
+            color: #999;
+            margin: 5px 0;
+        }
+
+        .security-note {
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #777;
+            border-left: 4px solid #3b82f6;
+        }
+
+        @media only screen and (max-width: 640px) {
+            .container {
+                margin: 0;
+                width: 100% !important;
+                border-radius: 0;
+            }
+
+            .header {
+                padding: 40px 20px 20px;
+            }
+
+            .content {
+                padding: 0 20px 30px;
+            }
+
+            .brand-name {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #fafafa;">
+        <tr>
+            <td align="center">
+                <div class="container">
+                    <!-- Brand Identity Header -->
+                    <div class="header">
+                        <h1 class="brand-name">河图作品勘鉴</h1>
+                        <div class="subtitle">Hetu Project Appreciation</div>
+                    </div>
+
+                    <!-- Main Content Body -->
+                    <div class="content">
+                        <div class="greeting">欢迎加入我们的旅程</div>
+                        <p>
+                            很高兴看到你对河图音乐作品的热爱。我们在「河图作品勘鉴」为你准备了一个安静的角落，让你能够探索、收录与鉴赏每一段记忆中的旋律。
+                        </p>
+                        <p>
+                            在开始之前，我们需要确认你的邮箱：
+                        </p>
+
+                        <div class="cta-container">
+                            <!-- Supabase Placeholders: {{ .ConfirmationURL }} -->
+                            <a href="{{ .ConfirmationURL }}" class="cta-button">激活账号</a>
+                        </div>
+
+                        <p style="font-size: 14px; color: #888; text-align: center;">或者复制此链接并在浏览器中打开：<br>
+                            <a href="{{ .ConfirmationURL }}"
+                                style="color: #3b82f6; text-decoration: none; word-break: break-all;">{{
+                                .ConfirmationURL }}</a>
+                        </p>
+
+                        <div class="security-note">
+                            如果你并未申请注册此账号，请忽略这封邮件。链接将在 24 小时后失效。
+                        </div>
+                    </div>
+
+                    <!-- Elegant Footer -->
+                    <div class="footer">
+                        <a class="footer-text" href="https://hetu-music.com">河图作品勘鉴</a>
+                        <p class="footer-text">这是一封自动发送的邮件，请勿直接回复。</p>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
