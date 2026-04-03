@@ -66,22 +66,35 @@
             margin-bottom: 20px;
         }
 
-        .cta-container {
-            padding: 40px 0;
+        /* OTP Code Styles */
+        /* Centered UI Hierarchy */
+        .instruction-text {
+            margin: 48px 0 16px;
+            color: #475569;
+            font-size: 15px;
+            font-weight: 600;
             text-align: center;
         }
 
-        .cta-button {
-            display: inline-block;
-            padding: 18px 50px;
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-            color: #ffffff !important;
-            text-decoration: none;
+        /* Refined Compact OTP Box */
+        .otp-box {
+            background-color: #f0f7ff;
+            border: 2px dashed #3b82f6;
             border-radius: 12px;
-            font-weight: 600;
-            font-size: 16px;
-            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
-            transition: transform 0.2s ease;
+            padding: 24px;
+            margin: 20px auto;
+            max-width: 320px;
+            text-align: center;
+        }
+
+        .otp-code {
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 36px;
+            font-weight: 800;
+            color: #2563eb;
+            letter-spacing: 8px;
+            margin: 0;
+            padding-left: 8px;
         }
 
         .footer {
@@ -95,6 +108,7 @@
             font-size: 13px;
             color: #999;
             margin: 5px 0;
+            text-decoration: none;
         }
 
         .security-note {
@@ -114,16 +128,9 @@
                 border-radius: 0;
             }
 
-            .header {
-                padding: 40px 20px 20px;
-            }
-
-            .content {
-                padding: 0 20px 30px;
-            }
-
-            .brand-name {
-                font-size: 26px;
+            .otp-code {
+                font-size: 36px;
+                letter-spacing: 8px;
             }
         }
     </style>
@@ -139,33 +146,25 @@
                         <h1 class="brand-name">河图作品勘鉴</h1>
                         <div class="subtitle">Hetu Project Appreciation</div>
                     </div>
-
                     <!-- Main Content Body -->
                     <div class="content">
                         <div class="greeting">欢迎加入我们的旅程</div>
                         <p>
-                            很高兴看到你对河图音乐作品的热爱。我们在「河图作品勘鉴」为你准备了一个安静的角落，让你能够探索、收录与鉴赏每一段记忆中的旋律。
+                            很高兴看到你对河图音乐作品的热爱。我们在「河图作品勘鉴」为你准备了一个安静的角落，让你能够探索、收集与鉴赏每一段记忆中的旋律。
                         </p>
-                        <p>
-                            在开始之前，我们需要确认你的邮箱：
-                        </p>
-
-                        <div class="cta-container">
-                            <!-- Supabase Placeholders: {{ .ConfirmationURL }} -->
-                            <a href="{{ .ConfirmationURL }}" class="cta-button">激活账号</a>
+                        <div class="instruction-text" style="margin-top: 32px;">
+                            在开始前，请先输入你的验证码
                         </div>
 
-                        <p style="font-size: 14px; color: #888; text-align: center;">或者复制此链接并在浏览器中打开：<br>
-                            <a href="{{ .ConfirmationURL }}"
-                                style="color: #3b82f6; text-decoration: none; word-break: break-all;">{{
-                                .ConfirmationURL }}</a>
-                        </p>
+                        <!-- Refined Compact OTP Box -->
+                        <div class="otp-box">
+                            <div class="otp-code">{{ .Token }}</div>
+                        </div>
 
                         <div class="security-note">
-                            如果你并未申请注册此账号，请忽略这封邮件。链接将在 24 小时后失效。
+                            如果你并未注册此账号，请忽略这封邮件。验证码将于 24 小时后失效。
                         </div>
                     </div>
-
                     <!-- Elegant Footer -->
                     <div class="footer">
                         <a class="footer-text" href="https://hetu-music.com">河图作品勘鉴</a>
